@@ -1,0 +1,10 @@
+/* Style for background image in home */
+.bg-img{
+    background-image: linear-gradient(
+        rgba(7, 7, 29, 0.363),
+        rgba(24, 24, 21, 0.582)
+      ),url("./DL1.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+}

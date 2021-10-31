@@ -1,0 +1,8 @@
+/* Hover style for navbar */
+.navs:hover{
+    font-weight: bolder;
+}
+
+.navbar{
+    background-color: darkslateblue;
+}

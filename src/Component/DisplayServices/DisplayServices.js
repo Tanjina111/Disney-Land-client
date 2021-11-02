@@ -13,8 +13,8 @@ const DisplayServices = (props) => {
                 <h4 className='text-danger'>{name}</h4>
                 <p>{des}</p>
                 <h6 className='text-danger'>Ticket Price:</h6>
-                <h6>Regular Price: {price}</h6>
-                <h6>Offer Price: <span className='text-danger'>{offer}</span></h6><br />
+                <h6>Regular Price: ${price}</h6>
+                <h6>Offer Price: <span className='text-danger'>${offer}</span></h6><br />
 
                 {/* Get Detail Id */}
                 <Link to={`/detail/${_id}`}><button className='btn btn-warning'>Book Now</button></Link>

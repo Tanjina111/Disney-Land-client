@@ -49,6 +49,8 @@ const Home = () => {
             </div>
             </div>
         </div>
+
+        {/* Fourth Part */}
         <div>
             <img src={Image2} alt="" className='img-fluid w-100'/>
         </div>

@@ -40,6 +40,7 @@ const Detail = () => {
 
         const order = { name, service, price, email, phone, address, img};
 
+        // Order Placed To New Database
         fetch('http://localhost:5000/orders', {
             method: 'POST',
             headers: {
@@ -67,7 +68,7 @@ const Detail = () => {
             <img src={service?.img} className="img-fluid rounded" alt="..." />
             <div className="card-text text-center mt-2">
             <p>{service?.detail}</p>
-            <h6>Offer Price: <span className='text-danger'>{service?.offer}</span></h6>
+            <h6>Offer Price: $<span className='text-danger'>{service?.offer}</span></h6>
             </div>
         </div>
 

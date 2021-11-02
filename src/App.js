@@ -9,6 +9,8 @@ import Detail from './Component/Detail/Detail';
 import PageError from './Component/PageError/PageError';
 import Footer from './Component/Footer/Footer';
 import MyOrders from './Component/MyOrders/MyOrders';
+import ManageOrders from './Component/ManageOrders/ManageOrders';
+import AddService from './Component/AddService/AddService';
 
 
 function App() {
@@ -29,9 +31,16 @@ function App() {
         <PrivateRoute path='/detail/:id'>
         <Detail></Detail>
         </PrivateRoute>
-        <Route path='/orders'>
+        <PrivateRoute path='/orders/:id'>
         <MyOrders></MyOrders>
-        </Route>
+        </PrivateRoute>
+        <PrivateRoute path='/manageorders'>
+        <ManageOrders></ManageOrders>
+        </PrivateRoute>
+        <PrivateRoute path='/addservice'>
+        <AddService></AddService>
+        </PrivateRoute>
+  
         <Route path='/login'>
         <LogIn></LogIn>
         </Route>

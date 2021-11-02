@@ -9,7 +9,7 @@ const Home = () => {
     // const [cart, setCart] = useState(service);
 
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://frozen-river-40147.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setService(data));
     }, []);

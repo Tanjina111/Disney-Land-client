@@ -8,9 +8,6 @@ const LogIn = () => {
     const location = useLocation();
     const history = useHistory();
 
-    // const [mail, setMail] = useState('');
-    // const [pass, setPass] = useState('');
-
     // Google Log In
     const handleGoogleLogIn = () => {
         signInUsingGoogle()
@@ -19,31 +16,6 @@ const LogIn = () => {
             }) 
     } 
 
-    // // Get Mail Address
-    // const handleEmail = e => {
-    //     setMail(e.target.value);
-    // }
-
-    // // Get Password
-    // const handlePass = e => {
-    //     setPass(e.target.value);
-    // }
-
-    // // Log In
-    // const handleLogIn = e => {
-    //     if(mail && pass){
-    //         if(error){
-    //             setMail('');
-    //             setPass('');
-    //             history.push(location.state?.from || '/login');
-    //         }
-    //         else{
-    //             signUpWithPass(mail, pass)
-    //             history.push(location.state?.from || '/home');
-    //         }
-    //     }
-        
-    // }
     return (
         <div className='container my-3 d-flex my-5'>
             <div className='col-5'>

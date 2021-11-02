@@ -7,7 +7,7 @@ const AddService = () => {
 
     // Load Data
     const onSubmit = (data) => {
-        fetch('http://localhost:5000/services', {
+        fetch('https://frozen-river-40147.herokuapp.com/services', {
             method: "POST",
             headers: {
                 "content-type": "application/json",

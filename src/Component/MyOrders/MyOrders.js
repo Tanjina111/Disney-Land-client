@@ -7,7 +7,7 @@ const MyOrders = () => {
 
     // Load Data
     useEffect(() => {
-        fetch(`http://localhost:5000/orders/${user?.email}`)
+        fetch(`https://frozen-river-40147.herokuapp.com/orders/${user?.email}`)
         .then(res => res.json())
         .then(data => setOrders(data));
     }, []);
@@ -16,7 +16,7 @@ const MyOrders = () => {
     const handleDelete = id => {
         const confirm = window.confirm('Delete this order?');
         if(confirm) {
-            fetch(`http://localhost:5000/orders/${id}`, {
+            fetch(`https://frozen-river-40147.herokuapp.com/orders/${id}`, {
                 method: 'DELETE',
             })
             .then(res => res.json())

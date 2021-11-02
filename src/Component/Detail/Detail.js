@@ -41,7 +41,7 @@ const Detail = () => {
         const order = { name, service, price, email, phone, address, img};
 
         // Order Placed To New Database
-        fetch('http://localhost:5000/orders', {
+        fetch('https://frozen-river-40147.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

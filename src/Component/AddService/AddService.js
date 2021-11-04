@@ -24,15 +24,15 @@ const AddService = () => {
     };
     return (
         <div className='my-5 container'>
-            <div className='d-flex'>
+            <div className='d-flex justify-content-evenly my-5 row'>
             
             {/* Left side */}
-            <div className='col-lg-4 m-auto'>
+            <div className='col-lg-4 col-12 col-md-5 m-auto'>
                 <img className='img-fluid' src={Image} alt="" />
             </div>
 
             {/* Add Service */}
-            <div style={{backgroundColor: 'rgba(189, 181, 240, 0.918)'}} className='col-lg-5 m-auto py-3'>
+            <div style={{backgroundColor: 'rgba(189, 181, 240, 0.918)'}} className='col-lg-5 col-12 col-md-5 m-auto py-3'>
             <h4>Add New Service</h4>
             <form onSubmit={handleSubmit(onSubmit)}>
 
@@ -44,7 +44,7 @@ const AddService = () => {
                 /><br /><br />
 
                 <textarea className='w-50'
-                    {...register("description")}
+                    {...register("detail")}
                     placeholder="Type service detail"
                     required
                 /><br /><br />
@@ -54,6 +54,12 @@ const AddService = () => {
                     {...register("price")}
                     placeholder="Type price"
                     required
+                /><br /><br />
+
+                <input className='w-50'
+                    type="number"
+                    {...register("offer")}
+                    placeholder="Type price"
                 /><br /><br />
                 
                 <input className='w-50'

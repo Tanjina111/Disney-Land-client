@@ -5,7 +5,7 @@ const Footer = () => {
     return (
 
         // Footer
-        <div style={{backgroundColor: 'darkslateblue'}} className='p-3 position-sticky'>
+        <div style={{backgroundColor: 'darkslateblue'}} className='p-3 position-sticky class="fixed-bottom"'>
             <div className='d-flex justify-content-between'>
             <div className='col-lg-5 m-auto'>
             <p className='text-light'>Enter your E-mail address for subscription</p>

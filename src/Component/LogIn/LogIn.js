@@ -17,11 +17,11 @@ const LogIn = () => {
     } 
 
     return (
-        <div className='container my-3 d-flex my-5'>
-            <div className='col-5'>
+        <div className='container d-flex justify-content-evenly my-5 container row'>
+            <div className='col-12 col-lg-5 col-md-5'>
                 <img src={Image} alt="" />
             </div>
-            <div className='col-5'>
+            <div className='col-12 col-lg-5 col-md-5'>
 
                 {/* Login Form */}
                 <h2 className='text-primary'>Login</h2>

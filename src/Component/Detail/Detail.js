@@ -13,7 +13,7 @@ const Detail = () => {
 
   // Get Data
     useEffect(() => {
-    fetch(`http://localhost:5000/services/${id}`)
+    fetch(`https://frozen-river-40147.herokuapp.com/services/${id}`)
     .then(res => res.json())
     .then(data => setService(data))
     }, []);
@@ -46,7 +46,7 @@ const Detail = () => {
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(order)
+            body: JSON.stringify({...order, status : 'Pending'})
         })
             .then(res => res.json())
             .then(data => {
@@ -65,10 +65,12 @@ const Detail = () => {
 
             {/* Detail */}
         <div className="col-md-5 col-12 py-1 px-1 text-start mx-auto shadow rounded mb-1">
+            <div className='p-2'>
             <img src={service?.img} className="img-fluid rounded" alt="..." />
             <div className="card-text text-center mt-2">
             <p>{service?.detail}</p>
             <h6>Offer Price: $<span className='text-danger'>{service?.offer}</span></h6>
+            </div>
             </div>
         </div>
 
@@ -83,7 +85,7 @@ const Detail = () => {
             <input type="text" defaultValue={user?.displayName} ref={nameRef} /><br />
             <input type="text" defaultValue={user?.email} ref={emailRef} /><br /><br />
             <input type="text" placeholder='Type your exact address' ref={addressRef} required/><br />
-            <input type="number" placeholder='Type your correct phone number' ref={phoneRef} /><br /><br />
+            <input type="number" placeholder='Type your correct phone number' ref={phoneRef} required/><br /><br />
             <button type="submit" className='btn btn-warning mb-2'>Place Order</button>
         </form>
         </div>
